@@ -1,4 +1,3 @@
-@ -0,0 +1,96 @@
 const resources = [
     {
         category: "HTML",
@@ -95,3 +94,23 @@ const resources = [
         ]
     },
 ]
+
+function show (kategori){
+    let chosen= resources.find((item)=> item.category === kategori); 
+    let artikkler_innhold = `
+    <article class="artikkel_kort">
+    <h1 class="tittel">${chosen.category}</h1>
+    <p class= "text">${chosen.text}</p>
+    <ul class="linker">
+        <li><a href="${chosen.sources[0].url}">${chosen.sources[0].title}</a></li>
+        <li><a href="${chosen.sources[1].url}">${chosen.sources[1].title}</a></li>
+        <li><a href="${chosen.sources[2].url}">${chosen.sources[2].title}</a></li>
+
+    </ul>
+
+</article>
+    `
+    document.getElementById("artikkler").innerHTML = artikkler_innhold; 
+    document.getElementById("artikkler").classList.remove("hidden");
+    document.getElementById("artikkler").classList.add("active");
+}

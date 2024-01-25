@@ -18,6 +18,7 @@ div.innhold{
     max-width: var(--bredde);
     background-color: var(--white);
     box-sizing: border-box;
+    margin-left: 2%;
 }
 
 #meny{
@@ -28,11 +29,14 @@ div.innhold{
     font-weight:bold;
     border: 1px;
     justify-content: space-between;
+    margin: 0%;
+    padding: 0%;
 
 }
 #meny a{
-    border: 1px;
-    padding: 1rem;
+    display: block;
+    border-right:1px var(--white);
+    padding: 15px;
     margin:auto;
 }
 #meny a:active{
@@ -40,4 +44,10 @@ div.innhold{
     color: black;
     font-weight: bold;
     
+}
+
+.artikkel_kort{
+padding-left: 50px;
+padding-top: 50px;
+padding-bottom: 70px;
 }

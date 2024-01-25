@@ -96,19 +96,20 @@ const resources = [
 ]
 
 function show (kategori){
+
     let chosen= resources.find((item)=> item.category === kategori); 
-    let artikkler_innhold = `
+    let links = chosen.sources.map((source)=> `<li><a href="${source.url}">${source.title}</a></li>`).join('');
+    
+    let artikkler_innhold = 
+    `
     <article class="artikkel_kort">
     <h1 class="tittel">${chosen.category}</h1>
     <p class= "text">${chosen.text}</p>
     <ul class="linker">
-        <li><a href="${chosen.sources[0].url}">${chosen.sources[0].title}</a></li>
-        <li><a href="${chosen.sources[1].url}">${chosen.sources[1].title}</a></li>
-        <li><a href="${chosen.sources[2].url}">${chosen.sources[2].title}</a></li>
-
+        <li><a href="${links}</a></li>
     </ul>
 
-</article>
+    </article>
     `
     document.getElementById("artikkler").innerHTML = artikkler_innhold; 
     document.getElementById("artikkler").classList.remove("hidden");

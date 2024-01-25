@@ -8,6 +8,7 @@
 }
 
 body {
+    display: flex;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--grey);
     width: var(--bredde);
@@ -19,35 +20,49 @@ div.innhold{
     background-color: var(--white);
     box-sizing: border-box;
     margin-left: 2%;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 20%;
+
 }
 
 #meny{
     background-color: var(--darkblue);
     color: var(--white);
     display: flex;
-    padding: 1rem 1rem;
     font-weight:bold;
-    border: 1px;
     justify-content: space-between;
-    margin: 0%;
-    padding: 0%;
+    padding: 0px;
 
 }
 #meny a{
-    display: block;
-    border-right:1px var(--white);
-    padding: 15px;
-    margin:auto;
+flex: 1;
+display: block;
+border-right: 20px solid var(--grey);
+margin-right: 20px var(--white);
+text-align: center;
+padding: 5px;
 }
-#meny a:active{
+
+#meny a:last-child{
+    border-right: 0;
+
+}
+
+#meny a.kategori:active{
     background-color: var(--white);
     color: black;
     font-weight: bold;
-    
 }
 
 .artikkel_kort{
 padding-left: 50px;
 padding-top: 50px;
 padding-bottom: 70px;
+}
+
+.artikkel_kort h1{
+    font-weight:bolder;
+    font-size: xx-large;
+
 }

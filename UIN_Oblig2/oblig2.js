@@ -113,5 +113,5 @@ function show (kategori){
     `
     document.getElementById("artikkler").innerHTML = artikkler_innhold; 
     document.getElementById("artikkler").classList.remove("hidden");
-    document.getElementById("artikkler").classList.add("active");
+    document.getElementById("meny").classList.add("active");
 }
